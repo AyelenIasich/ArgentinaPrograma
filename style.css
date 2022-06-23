@@ -96,12 +96,13 @@ body {
 .logo {
   font-size: 0.9em;
   color: var(--link-navbar-color);
-   font-weight: 400;
+  
 }
 
 .btn-outline-success {
   border-color: var(--second-color) !important;
   color: var(--second-color) !important;
+  font-weight: 400;
 }
 .btn-outline-success:hover {
   background-color: var(--second-color) !important;
