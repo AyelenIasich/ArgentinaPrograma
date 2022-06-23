@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,900;1,300;1,700&display=swap");
+
+:root {
+  /* main theme color */
+  --first-color: #0e2431;
+  --second-color: #6a59d1;
+
+  --link-navbar-color: #757575;
+
+  /*Hover color*/
+  --hover-color: #614fd0;
+
+  /*body-bg-color*/
+  --body-bg-color: #fefefe;
+  --card-bg-color: #fff;
+  --modal-bg-color: #fff;
+  --bg-transparent-color-01: rgba(0, 0, 0, 0.1);
+  --transparent-color-01: rgba(0, 0, 0, 0.1);
+  --transparent-color-02: rgba(106, 89, 209, 0.1);
+  --line-color: #d7d7d7;
+  --footer-bg-color: #222;
+  --footer-link-color: rgb(176, 172, 172);
+  --footer-select-link-color: #d7d7d7;
+
+  /* --Color filter*/
+  --color-filter: invert(1);
+
+  /* --Box Shadow*/
+  --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
+
+  /* --Font Size*/
+  --small-font-size: 0.9em;
+  --normal-font-size: 1em;
+
+  /* Scrool Bar colors*/
+
+  --scroll-bar-color: #c5cadf;
+  --scroll-thumb-color: #70768a;
+  --scroll-thumb-hover-color: #454f6b;
+
+  /*Contact me color */
+
+  --contact-color: #6a59d1;
+}
+
+/* General settings */
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--first-color);
+  background: var(--body-bg-color);
+  transition: 0.5s ease;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* Header and NavBar */
+
+#header {
+  transition: 0.6s ease !important;
+}
+
+.nav-bar {
+  transition: 0.6s ease !important;
+}
+
+.navbar {
+  background: rgba(255, 255, 255, 0.2) !important;
+  z-index: 2;
+  backdrop-filter: blur(10px) saturate(125%);
+  -webkit-backdrop-filter: blur(10px) saturate(125%);
+  font-size: 1em;
+  font-weight: 400;
+}
+.nav-item a {
+  color: --navbar-color !important;
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+}
+
+.nav-item a:hover {
+  color: var(--second-color) !important;
+}
+
+.nav-item .text-contact {
+  color: var(--contact-color) !important;
+}
+
+
+.logo {
+  font-size: 0.9em;
+  color: var(--link-navbar-color);
+   font-weight: 400;
+}
+
+.btn-outline-success {
+  border-color: var(--second-color) !important;
+  color: var(--second-color) !important;
+}
+.btn-outline-success:hover {
+  background-color: var(--second-color) !important;
+  color: white !important;
+}
+
+/*=============== Footer =============== */
+#footer {
+  background-color: var(--footer-bg-color);
+  color: var(--body-body-color);
+}
+#footer h3,
+p {
+  color: var(--line-color);
+}
+
+#footer a,
+p {
+  font-size: var(--small-font-size);
+}
+
+#footer a {
+  text-decoration: none;
+  color: var(--footer-link-color);
+  transition: 0.3s;
+}
+
+#footer a:hover {
+  color: var(--footer-select-link-color);
+}
+
+#footer li {
+  list-style: none;
+}
+
+/* ========= main ============== */
+main {
+  height: 700px;
+  width: 100%;
+  background-color: var(--body-bg-color);
+}
