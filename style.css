@@ -3,7 +3,12 @@
 :root {
   /* main theme color */
   --first-color: #0e2431;
-  --second-color: #6a59d1;
+  --main-color-light: #6a59d1;
+  --main-color-dark: #7c6cd9;
+
+  /* text-color */
+  --grey-text-modo-dark: #cfcfcf;
+  --grey-text-modo-light: #757575;
 
   --link-navbar-color: #757575;
 
@@ -56,57 +61,47 @@ body {
   color: var(--first-color);
   background: var(--body-bg-color);
   transition: 0.5s ease;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* background-repeat: no-repeat;
+  background-attachment: fixed; */
 }
 
-/* Header and NavBar */
+/* =====================================Header and NavBar ========================================= */
 
 #header {
   transition: 0.6s ease !important;
 }
 
-.nav-bar {
-  transition: 0.6s ease !important;
-}
-
 .navbar {
-  background: rgba(255, 255, 255, 0.2) !important;
-  z-index: 2;
-  backdrop-filter: blur(10px) saturate(125%);
-  -webkit-backdrop-filter: blur(10px) saturate(125%);
   font-size: 1em;
-  font-weight: 400;
+
 }
 .nav-item a {
-  color: --navbar-color !important;
-  font-size: var(--normal-font-size);
-  font-weight: 500;
+    font-weight: 500;
 }
 
 .nav-item a:hover {
-  color: var(--second-color) !important;
+  color: var(--main-color-light) !important;
 }
-
-.nav-item .text-contact {
-  color: var(--contact-color) !important;
-}
-
 
 .logo {
   font-size: 0.9em;
   color: var(--link-navbar-color);
-  
 }
 
-.btn-outline-success {
-  border-color: var(--second-color) !important;
-  color: var(--second-color) !important;
-  font-weight: 400;
+.btn-outline-login {
+  border-color: var(--main-color-light) !important;
+  color: var(--main-color-light) !important;
+  font-weight: 500 !important;
 }
-.btn-outline-success:hover {
-  background-color: var(--second-color) !important;
+.btn-outline-login:hover {
+  background-color: var(--main-color-light) !important;
   color: white !important;
+}
+
+nav .media-icons {
+  align-self: center;
+  padding: 0;
+  margin-bottom: 0.2em;
 }
 
 /*=============== Footer =============== */
@@ -138,9 +133,99 @@ p {
   list-style: none;
 }
 
-/* ========= main ============== */
+/* ======================== main ================================= */
 main {
-  height: 700px;
-  width: 100%;
+  height: 85vh;
   background-color: var(--body-bg-color);
+}
+
+main .container,
+main .row {
+  height: 90%;
+}
+
+main .intro {
+  color: #0e2431;
+}
+
+.main .info h1 {
+  font-size: 4em;
+  line-height: 70px;
+}
+
+#ayelen {
+  color: var(--main-color-light);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.main .info h3 {
+  line-height: 50px;
+  font-weight: 600;
+  color: var(--grey-text-modo-light);
+  font-feature-settings: 1.3em;
+}
+
+.main .info p {
+  max-width: 350px;
+  color: var(--grey-text-modo-light);
+  font-weight: 500;
+}
+
+.aye-img {
+  width: 80%;
+  transform: translate(0, 0);
+}
+
+.main .btn-primary {
+  border: none;
+  color: white !important;
+  font-weight: 500;
+
+  box-shadow: inset 0 0 0 0 rgb(203, 114, 194) !important;
+  transition: ease-out 0.5s;
+  background: rgb(203, 114, 194);
+  background: linear-gradient(
+    53deg,
+    rgba(203, 114, 194, 1) 0%,
+    rgba(143, 116, 212, 1) 56%,
+    rgba(106, 89, 209, 1) 100%
+  );
+}
+.btn-primary:hover {
+  box-shadow: inset 300px 0 0 0 rgb(203, 114, 194) !important;
+}
+
+main .scroll-down {
+  height: 15vh;
+}
+
+.scroll-down a {
+  color: var(--grey-text-modo-light);
+  font-weight: 600;
+  text-decoration: none;
+}
+.scroll-down a:hover {
+  color: var(--main-color-light);
+}
+
+.scroll-down i {
+  font-size: 1.2em;
+  animation: arrow-down ease 2s infinite;
+  color: var(--main-color-light);
+}
+
+@keyframes arrow-down {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(10px);
+  }
+}
+
+/* ======================Sobre mi Section ============================ */
+
+#sobre-mi {
+  height: 100vh;
 }
