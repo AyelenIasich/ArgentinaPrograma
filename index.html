@@ -20,11 +20,8 @@
   </head>
   <body>
     <!-- ============NavBar============= -->
-    <nav
-      id="header"
-      class="navbar navbar-expand-lg navbar-light bg-light sticky-top"
-    >
-      <div class="container">
+    <nav id="header" class="navbar navbar-expand-xl navbar-light bg-light fs-5">
+      <div class="container-xl">
         <a class="navbar-brand" href="#">
           <img
             src="assets/Icons/LogoArgentinaProgramaLogo-AP.svg"
@@ -33,10 +30,41 @@
             width="175"
             height="50"
             class="d-inline-block"
-          /><span class="logo">#YoProgramo</span>
+          /><span class="d-none d-md-inline-block logo fs-5">#YoProgramo</span>
         </a>
+        <div class="media-icons ms-auto d-none d-sm-inline-block d-xl-none me-0 mb-0">
+          <a class="navbar-brand" href="https://ar.linkedin.com/in/ayeiasich"
+            ><img
+              src="assets/Icons/IconLinkedin.svg"
+              alt=""
+              width="24"
+              height="24"
+          /></a>
+          <a class="navbar-brand" href="https://www.instagram.com/?hl=es"
+            ><img
+              src="assets/Icons/Instagram.svg"
+              alt=""
+              width="24"
+              height="24"
+          /></a>
+          <a class="navbar-brand" href="https://github.com/AyelenIasich"
+            ><img
+              src="assets/Icons/IconGithubicon.svg"
+              alt=""
+              width=""
+              height=""
+          /></a>
+          <button
+            type="button"
+            class="btn btn-sm btn-outline-login px-2 fs-6 ms-auto me-4 "
+            id="btn-login-sm"
+          >
+            Login in
+          </button>
+        </div>
+
         <button
-          class="navbar-toggler"
+          class="navbar-toggler float-end"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -46,6 +74,7 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
@@ -66,7 +95,7 @@
               <a class="nav-link text-contact me-2" href="#">Contacto</a>
             </li>
 
-            <div class="media-icons">
+            <div class="media-icons  d-sm-none d-md-none d-lg-none d-xl-inline-block">
               <a
                 class="navbar-brand"
                 href="https://ar.linkedin.com/in/ayeiasich"
@@ -92,7 +121,10 @@
               /></a>
             </div>
 
-            <button type="button" class="btn btn-sm btn-outline-login px-2">
+            <button
+              type="button"
+              class="btn btn-sm btn-outline-login px-2 fs-6 d-sm-none d-md-none d-lg-none d-xl-inline-block"
+            >
               Login in
             </button>
           </ul>
@@ -103,21 +135,43 @@
     <!--=================== /NavBar ======================-->
     <!--======================== Main ===============  -->
     <main id="main">
-      <div class="container main position-relative">
-        <div class="row align-items-center justify-content-center">
-          <div class="col-md-6 intro">
-            <div class="info ps-2">
-              <h1><span id="ayelen">AYELÉN</span> Iasich</h1>
-              <h3>Full Stack Developer Jr.</h3>
-              <p>
+      <div class="overlay">
+        <div class="container-fluid p-0">
+          <div class="row align-items-md-end row-overlay">
+            <div class="col-sm-12 col-md-6 p-0">
+              <div class="bg-main-left d-none d-md-block">
+                <img src="assets/Formas/main-left.svg" alt="" />
+              </div>
+            </div>
+            <div
+              class="col-sm-12 align-self-end text-end col-md-6 text-md-end p-0"
+            >
+              <div class="bg-main-right ">
+                <img src="assets/Formas/main-right.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container main">
+        <div
+          class="row align-items-center justify-content-center mt-md-5 mt-lg-0 pt-xl-5 mt-xl-5"
+        >
+          <div class="col order-2 col-md-6 intro ">
+            <div class="info ms-2">
+              <h2 class="display-2 mt-2 ">
+                <span id="ayelen">AYELÉN</span> Iasich
+              </h2>
+              <h3 class="lh-sm">Full Stack Developer Jr.</h3>
+              <p class="fs-6 lh-base">
                 Hola! Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Phasellus sodales ut Curabitur maximus sit amet sapi.
               </p>
               <a href="" class="btn btn-primary">Descargar CV</a>
             </div>
           </div>
-          <div class="col-md-6 align-self-center">
-            <div class="text-center pt-4">
+          <div class="col-md-6 align-self-center order-md-2">
+            <div class="text-center pt-md-4">
               <img
                 src="assets/AyeHeroe.svg"
                 alt="Imagen de Desarrolladora"
@@ -127,7 +181,7 @@
           </div>
         </div>
       </div>
-      <div class="container scroll-down">
+      <div class="container scroll-down d-none d-md-block">
         <div class="row">
           <div class="col text-center">
             <a href="#sobre-mi"

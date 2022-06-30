@@ -33,9 +33,6 @@
   /* --Box Shadow*/
   --box-shadow: 0px 0px 20px rgb(0 0 0 / 10%);
 
-  /* --Font Size*/
-  --small-font-size: 0.9em;
-  --normal-font-size: 1em;
 
   /* Scrool Bar colors*/
 
@@ -61,8 +58,18 @@ body {
   color: var(--first-color);
   background: var(--body-bg-color);
   transition: 0.5s ease;
-  /* background-repeat: no-repeat;
-  background-attachment: fixed; */
+}
+
+/* Media queries */
+
+/* Main */
+@media (max-width: 560px) {
+    .bg-main-right img {
+    width: 75%!important;
+    height: 55%!important;
+    opacity: 45%;
+ 
+  }
 }
 
 /* =====================================Header and NavBar ========================================= */
@@ -71,12 +78,9 @@ body {
   transition: 0.6s ease !important;
 }
 
-.navbar {
-  font-size: 1em;
 
-}
-.nav-item a {
-    font-weight: 500;
+.nav-item a, .navbar .logo {
+  font-weight: 500;
 }
 
 .nav-item a:hover {
@@ -92,6 +96,7 @@ body {
   border-color: var(--main-color-light) !important;
   color: var(--main-color-light) !important;
   font-weight: 500 !important;
+  
 }
 .btn-outline-login:hover {
   background-color: var(--main-color-light) !important;
@@ -104,6 +109,11 @@ nav .media-icons {
   margin-bottom: 0.2em;
 }
 
+#btn-login-sm{
+  padding-top: 0.3em !important;
+  padding-bottom: 0.3em !important;
+}
+
 /*=============== Footer =============== */
 #footer {
   background-color: var(--footer-bg-color);
@@ -114,10 +124,10 @@ p {
   color: var(--line-color);
 }
 
-#footer a,
+/* #footer a,
 p {
   font-size: var(--small-font-size);
-}
+} */
 
 #footer a {
   text-decoration: none;
@@ -134,9 +144,48 @@ p {
 }
 
 /* ======================== main ================================= */
+/* Overlay */
+#main {
+  position: relative;
+}
+
+.overlay {
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  /* background-color:grey; */
+}
+
+.row-overlay {
+  width: 100%;
+}
+
+.overlay .container-fluid,
+.overlay .row {
+  height: 100%;
+}
+
+.bg-main-right img {
+  width: 45%;
+}
+.bg-main-left img {
+  width: 40%;
+}
+
+/* End Overlay */
+
+.main .info .display-2 {
+  font-weight: 600!important;
+ 
+ 
+}
 main {
-  height: 85vh;
+  max-height: vh;
   background-color: var(--body-bg-color);
+  opacity: 0.9;
 }
 
 main .container,
@@ -148,28 +197,20 @@ main .intro {
   color: #0e2431;
 }
 
-.main .info h1 {
-  font-size: 4em;
-  line-height: 70px;
-}
+
 
 #ayelen {
   color: var(--main-color-light);
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: 300!important;
 }
 
-.main .info h3 {
-  line-height: 50px;
-  font-weight: 600;
-  color: var(--grey-text-modo-light);
-  font-feature-settings: 1.3em;
-}
 
 .main .info p {
-  max-width: 350px;
+  max-width: 450px;
   color: var(--grey-text-modo-light);
   font-weight: 500;
+  
 }
 
 .aye-img {
